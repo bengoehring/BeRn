@@ -44,9 +44,8 @@ set_my_theme <- function(font = "CMU Serif") {
   # Set and return theme - - - - - - - - - - - - - - - - - - - - -
   ggplot2::theme_set(my_theme)
   
-  my_theme
+  my_theme <<- my_theme
+  
 }
-
-
 
 
