@@ -14,9 +14,9 @@
 set_my_theme <- function(font = "CMU Serif") {
   
   # loadfonts() needs to be called each R session 
-  extrafont::loadfonts()
+  suppressMessages(extrafont::loadfonts())
   
-  
+
   my_theme <- ggplot2::theme_classic() +
     ggplot2::theme(
         # Set plot font - - - - - - - - - - - - - - - - - - - - -
@@ -41,7 +41,10 @@ set_my_theme <- function(font = "CMU Serif") {
         axis.title.y = ggplot2::element_text(face = "italic")
         )
 
+  # Set and return theme - - - - - - - - - - - - - - - - - - - - -
   ggplot2::theme_set(my_theme)
+  
+  my_theme
 }
 
 
