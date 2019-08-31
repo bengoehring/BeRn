@@ -1,0 +1,15 @@
+Package: BeRn
+Version: 0.1
+Date: 2019-08-31
+Title: Common functions and ggplot themes
+Description: A collection of functions and ggplot themes that I use often.
+Author: Ben Goehring <bengoehr@umich.edu>
+Maintainer: Ben Goehring <bengoehr@umich.edu>
+Imports:
+    extrafont,
+    extrafontdb,
+    ggplot2,
+    Rttf2pt1
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 6.1.1
