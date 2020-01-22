@@ -11,5 +11,6 @@ Imports:
     ggplot2,
     Rttf2pt1
 License: GPL-3
+LazyData: true
 Encoding: UTF-8
 RoxygenNote: 6.1.1
