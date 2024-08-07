@@ -39,7 +39,9 @@ set_my_theme <- function(font = "CMU Serif") {
         
         axis.title.x = ggplot2::element_text(face = "italic"),
         
-        axis.title.y = ggplot2::element_text(face = "italic")
+        axis.title.y = ggplot2::element_text(face = "italic"),
+      
+      legend.position = 'bottom'
         )
 
   # Set and return theme - - - - - - - - - - - - - - - - - - - - -
