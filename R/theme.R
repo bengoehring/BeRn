@@ -20,7 +20,8 @@ set_my_theme <- function(font = "CMU Serif") {
   my_theme <- ggplot2::theme_classic() +
     ggplot2::theme(
         # Set plot font - - - - - - - - - - - - - - - - - - - - -
-        text = ggplot2::element_text(family = font),
+        text = ggplot2::element_text(family = font,
+                                     color = 'black'),
         
         
         # Set y grid lines to dark grey - - - - - - - - - - - - - 
