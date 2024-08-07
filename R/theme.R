@@ -23,6 +23,10 @@ set_my_theme <- function(font = "CMU Serif") {
         text = ggplot2::element_text(family = font,
                                      color = 'black'),
         
+        # not inheriting for some reason
+        axis.text = ggplot2::element_text(family = font,
+                                          color = 'black'),
+        
         
         # Set y grid lines to dark grey - - - - - - - - - - - - - 
         panel.grid.major.y = ggplot2::element_line(colour = "#dedddd"),
