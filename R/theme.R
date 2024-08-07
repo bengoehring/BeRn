@@ -27,6 +27,8 @@ set_my_theme <- function(font = "CMU Serif") {
         axis.text = ggplot2::element_text(family = font,
                                           color = 'black'),
         
+        axis.ticks = ggplot2::element_text(color = 'black'),
+        
         
         # Set y grid lines to dark grey - - - - - - - - - - - - - 
         panel.grid.major.y = ggplot2::element_line(colour = "#dedddd"),
