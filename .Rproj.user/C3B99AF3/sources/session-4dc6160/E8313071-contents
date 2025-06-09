@@ -1,0 +1,14 @@
+set_my_theme(colors = "um")
+
+
+library(tidyverse)
+
+diamonds %>% 
+  ggplot() + 
+  geom_point(aes(x = carat,
+                 y = price,
+                 color = cut),
+             alpha = .5)
+
+
+mtcars()

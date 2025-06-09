@@ -1,0 +1,35 @@
+
+
+library(tidyverse)
+
+
+options(ggplot2.discrete.colour = c("black", 
+                                  'red'))
+
+mtcars %>% 
+  ggplot() + 
+  geom_point(aes(x = mpg,
+                 y = wt,
+                 color = as.factor(cyl)))
+
+# Template function for creating densities grouped by a variable
+cty_by_var <- function(var) {
+  ggplot(mpg, aes(cty, colour = factor({{var}}), fill = factor({{var}}))) +
+    geom_density(alpha = 1)
+}
+
+# The default, scale_fill_hue(), is not colour-blind safe
+cty_by_var(class)
+
+
+okabe <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+options(ggplot2.discrete.colour = okabe)
+
+ggplot(mpg, aes(cty, colour = factor(class), fill = factor(class))) +
+  geom_density(alpha = 1)
+
+withr::with_options(
+  list(ggplot2.discrete.fill = okabe),
+  print(cty_by_var(class))
+)
