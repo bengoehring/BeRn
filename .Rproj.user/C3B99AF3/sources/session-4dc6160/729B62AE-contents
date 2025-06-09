@@ -35,7 +35,7 @@ set_my_theme <- function(font = "CMU Serif",
     options(ggplot2.discrete.fill = in_okabe_colors)
     
   } else if(colors == 'um') {
-    in_um_colors = c("#FFCB05", "#00274C", "#9A3324","#D86018", 
+    in_um_colors = c("#00274C", "#FFCB05", "#9A3324","#D86018", 
                      "#75988d", "#A5A508", "#00B2A9", "#2F65A7",
                      "#702082", "#575294", "#CFC096", "#9B9A6D", 
                      "#989C97", "#655A52", "#131516")
