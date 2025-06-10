@@ -4,7 +4,7 @@
 #'
 #' @param font Name of font for all text elements in plot. See extrafont::fonts() for available fonts. The default is CMU Serif.
 #' @param colors Color palette to use. Options include UVA, Okabe, and UM colors. The default is to keep ggplot2 defaults. 
-#'
+#' @param type Defaults to paper. If presentation, text size is scaled larger.
 #' @return Automatically sets the ggplot theme for the session via ggplot2::theme_set. It also returns a list containing the theme's elements.
 #'
 #' @author Ben Goehring \email{bengoehr@@umich.edu}
@@ -13,7 +13,8 @@
 #'
 
 set_my_theme <- function(font = "CMU Serif",
-                         colors = NULL) {
+                         colors = NULL,
+                         type = "paper") {
   
   if(is.null(colors)) {
     print("Retaining default ggplot2 colors.")
@@ -47,11 +48,20 @@ set_my_theme <- function(font = "CMU Serif",
   }
   
 
+  # set multiplicative factor if plots are for presentations
+  if(type == 'presentation') {
+    in_base_size = 14
+  } else if(type == 'paper') {
+    in_base_size = 11
+  } else {
+    stop()
+  }
+  
   # loadfonts() needs to be called each R session 
   suppressMessages(extrafont::loadfonts())
   
 
-  my_theme <- ggplot2::theme_classic() +
+  my_theme <- ggplot2::theme_classic(base_size = in_base_size) +
     ggplot2::theme(
         # Set plot font - - - - - - - - - - - - - - - - - - - - -
         text = ggplot2::element_text(family = font),
@@ -89,8 +99,9 @@ set_my_theme <- function(font = "CMU Serif",
   ggplot2::theme_set(my_theme)
   
   my_theme <<- my_theme
-  
 }
+
+
 
 
 

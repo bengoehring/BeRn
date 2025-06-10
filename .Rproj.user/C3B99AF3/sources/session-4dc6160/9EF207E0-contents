@@ -1,8 +1,0 @@
-library(tidyverse)
-set_my_theme(colors = 'uva')
-
-mtcars %>% 
-  ggplot() + 
-  geom_point(aes(x = wt,
-                 y = mpg,
-                 color = as.factor(cyl)))
