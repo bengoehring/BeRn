@@ -69,15 +69,24 @@ set_my_theme <- function(font = "CMU Serif",
         
       # Change plot titles - - - - - - - - - - - - - - - - - - - - -
         plot.title = ggplot2::element_text(face = "italic",
-                                           hjust = .5),
+                                           hjust = .5,
+                                           color = 'black'),
         
-        axis.title.x = ggplot2::element_text(face = "italic"),
+        axis.title.x = ggplot2::element_text(face = "italic",
+                                             color = 'black'),
         
-        axis.title.y = ggplot2::element_text(face = "italic"),
+        axis.title.y = ggplot2::element_text(face = "italic",
+                                             color = 'black'),
+      
+        axis.text = ggplot2::element_text(color = 'black'),
+        axis.ticks = ggplot2::element_line(color = 'black'),
+        legend.title = ggplot2::element_text(color = 'black'),
       
       # Faceting - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
         strip.text = ggplot2::element_text(face = "italic",
-                                           hjust = .5),
+                                           hjust = .5,
+                                           color = 'black',
+                                           size = 11),
         strip.background = ggplot2::element_blank(),
       
       
